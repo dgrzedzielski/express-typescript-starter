@@ -8,7 +8,7 @@
   "scripts": {
     "docker-local": "cross-env NODE_ENV=development docker-compose -f docker-compose.local.yml up -d",
     "start": "cross-env NODE_ENV=development  nodemon",
-    "build": "cross-env NODE_ENV=production tsc --project ./",
+    "build": "cross-env NODE_ENV=production tsc -p tsconfig.build.json",
     "test": "cross-env NODE_ENV=test jest"
   },
   "dependencies": {
