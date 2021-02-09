@@ -1,5 +1,6 @@
 import cookieParser from 'cookie-parser';
 import express, { Application } from 'express';
+import helmet from 'helmet';
 import { errorMiddleware } from '~/core/middlewares/error.middleware';
 
 export const createApp = (): Application => {
@@ -11,6 +12,7 @@ export const createApp = (): Application => {
       message: 'test',
     });
   });
+  app.use(helmet());
   app.use(express.json());
   app.use(express.urlencoded({ extended: false }));
   app.use(cookieParser());

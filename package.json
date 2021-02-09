@@ -6,6 +6,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
+    "docker-test": "cross-env NODE_ENV=development docker-compose -p test -f docker-compose.test.yml up",
     "docker-local": "cross-env NODE_ENV=development docker-compose -f docker-compose.local.yml up -d",
     "start": "cross-env NODE_ENV=development  nodemon",
     "build": "cross-env NODE_ENV=production tsc -p tsconfig.build.json",
@@ -15,6 +16,7 @@
     "cookie-parser": "^1.4.4",
     "express": "^4.17.1",
     "express-async-errors": "^3.1.1",
+    "helmet": "^4.4.1",
     "loglevel": "^1.7.1",
     "module-alias": "^2.2.2"
   },
